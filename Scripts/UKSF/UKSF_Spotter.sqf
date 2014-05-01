@@ -44,6 +44,6 @@ _unit addWeapon "Rangefinder";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
+_pack addMagazineCargo ["20Rnd_762x51_Mag", 2];
 _pack addItemCargo ["FirstAidKit", 2];
-_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 3];
-_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 3];
+_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 6];

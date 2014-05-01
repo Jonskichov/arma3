@@ -43,5 +43,5 @@ _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
 _pack addItemCargo ["7Rnd_408_Mag", 4];
-_pack addItemCargo ["FirstAidKit", 2];
-_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 4];
+_pack addItemCargo ["FirstAidKit", 6];
+_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 3];

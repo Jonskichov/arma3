@@ -44,6 +44,6 @@ _unit addWeapon "Binocular";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
-_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 4];
+_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 6];
 _pack addMagazineCargo ["HandGrenade", 4];
 _pack addItemCargo ["FirstAidKit", 2];
