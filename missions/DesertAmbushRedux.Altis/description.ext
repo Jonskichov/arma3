@@ -1,0 +1,16 @@
+
+onLoadName = "Desert Ambush Redux";
+author = Jonskichov;
+OnLoadMission = "Ambush the AAF convoy before moving on to assassinate two enemy officers meeting in Zaros.";
+
+respawn = "GROUP";
+respawnDelay = 5;
+respawnDialog = false;
+
+
+#include "VAS\menu.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};

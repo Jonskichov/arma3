@@ -1,0 +1,16 @@
+
+onLoadName = "Mission Name";
+author = Jonskichov;
+OnLoadMission = "Some subtitle...";
+
+respawn = "GROUP";
+respawnDelay = 5;
+respawnDialog = false;
+
+
+#include "VAS\menu.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};
