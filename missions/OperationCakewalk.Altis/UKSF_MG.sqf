@@ -25,7 +25,7 @@ _unit addMagazines ["16Rnd_9x21_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
-_unit addMagazines ["100Rnd_65x39_caseless_mag_Tracer", 4];
+_unit addMagazines ["100Rnd_65x39_caseless_mag_Tracer", 6];
 
 _unit addWeapon "arifle_MX_SW_Black_F";
 _unit addPrimaryWeaponItem "acc_pointer_IR";
@@ -35,7 +35,7 @@ _unit addPrimaryWeaponItem "muzzle_snds_H";
 _unit addWeapon "hgun_P07_F";
 _unit addHandgunItem "muzzle_snds_L";
 
-_unit addMagazines ["HandGrenade", 5];
+_unit addMagazines ["HandGrenade", 4];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 1];
@@ -46,8 +46,7 @@ _unit addWeapon "Binocular";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
-_pack addItemCargo ["100Rnd_65x39_caseless_mag_Tracer", 3];
-_pack addMagazineCargo ["HandGrenade", 3];
+_pack addMagazineCargo ["HandGrenade", 4];
 _pack addItemCargo ["FirstAidKit", 2];
 _pack addMagazineCargo ["DemoCharge_Remote_Mag", 1];
-_pack addMagazineCargo ["APERSBoundingMine_Range_Mag", 2];
+_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 2];

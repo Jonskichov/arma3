@@ -23,7 +23,8 @@ _unit addMagazines ["16Rnd_9x21_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
-_unit addMagazines ["7Rnd_408_Mag", 5];
+_unit addMagazines ["HandGrenade", 4];
+_unit addMagazines ["7Rnd_408_Mag", 9];
 
 _unit addWeapon "srifle_LRR_F";
 _unit addPrimaryWeaponItem "optic_SOS";
@@ -31,7 +32,6 @@ _unit addPrimaryWeaponItem "optic_SOS";
 _unit addWeapon "hgun_P07_F";
 _unit addHandgunItem "muzzle_snds_L";
 
-_unit addMagazines ["HandGrenade", 5];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 1];
@@ -42,7 +42,6 @@ _unit addWeapon "Rangefinder";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
-_pack addItemCargo ["7Rnd_408_Mag", 5];
+_pack addItemCargo ["7Rnd_408_Mag", 4];
 _pack addItemCargo ["FirstAidKit", 2];
-_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 3];
-_pack addMagazineCargo ["APERSBoundingMine_Range_Mag", 3];
+_pack addMagazineCargo ["SLAMDirectionalMine_Wire_Mag", 4];
