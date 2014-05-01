@@ -32,7 +32,7 @@ _unit addPrimaryWeaponItem "optic_Hamr";
 
 _unit addWeapon "hgun_P07_F";
 
-_unit addMagazines ["HandGrenade", 5];
+_unit addMagazines ["HandGrenade", 4];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 3];

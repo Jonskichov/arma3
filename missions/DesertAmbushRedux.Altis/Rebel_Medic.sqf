@@ -13,6 +13,7 @@ _unit addMagazines ["9Rnd_45ACP_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
+_unit addItem "FirstAidKit";
 _unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 9];
 
 _rifles = ["arifle_Mk20C_F", "arifle_TRG20_F"];

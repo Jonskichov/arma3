@@ -33,7 +33,7 @@ _unit addPrimaryWeaponItem "optic_Hamr";
 
 _unit addWeapon "hgun_P07_F";
 
-_unit addMagazines ["HandGrenade", 5];
+_unit addMagazines ["HandGrenade", 4];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 1];
@@ -44,8 +44,6 @@ _unit addWeapon "Binocular";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
-_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 4];
-_pack addMagazineCargo ["HandGrenade", 3];
+_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 6];
+_pack addMagazineCargo ["HandGrenade", 4];
 _pack addItemCargo ["FirstAidKit", 2];
-_pack addMagazineCargo ["DemoCharge_Remote_Mag", 1];
-_pack addMagazineCargo ["APERSBoundingMine_Range_Mag", 2];

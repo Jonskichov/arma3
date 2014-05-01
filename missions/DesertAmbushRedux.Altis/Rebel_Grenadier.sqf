@@ -13,6 +13,7 @@ _unit addMagazines ["9Rnd_45ACP_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
+_unit addItem "FirstAidKit";
 _unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 9];
 _unit addMagazines ["1Rnd_HE_Grenade_shell", 5];
 
@@ -30,7 +31,7 @@ _unit addMagazines ["SmokeShell", 1];
 _unit addWeapon "Binocular";
 
 _pack = unitBackpack _unit;
-_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 4];
+_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 6];
 _pack addMagazineCargo ["HandGrenade", 4];
-_pack addItemCargo ["FirstAidKit", 3];
+_pack addItemCargo ["FirstAidKit", 2];
 

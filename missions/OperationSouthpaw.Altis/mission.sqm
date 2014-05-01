@@ -212,7 +212,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.75;
 					text="squad1";
-					init="playergroup = group this; {_x assignAsCargo apc1} foreach units group squad1; {_x moveinCargo apc1} foreach units group squad1; nul = [this] execVM ""Grenadier.sqf"";";
+					init="playergroup = group this; {_x assignAsCargo apc1} foreach units group squad1; {_x moveinCargo apc1} foreach units group squad1; nul = [this] execVM ""UKInf_Grenadier.sqf"";";
 					syncId=3;
 					synchronizations[]={4,5,0,10,6};
 				};
@@ -228,7 +228,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1_1";
-					init="nul = [this] execVM ""Medic.sqf"";";
+					init="nul = [this] execVM ""UKInf_Medic.sqf"";";
 				};
 				class Item2
 				{
@@ -241,7 +241,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.75;
 					text="com5_1";
-					init="nul = [this] execVM ""Sniper.sqf"";";
+					init="nul = [this] execVM ""UKInf_Marksman.sqf"";";
 				};
 				class Item3
 				{
@@ -255,7 +255,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com7_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item4
 				{
@@ -268,7 +268,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.75;
 					text="com6_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item5
 				{
@@ -282,7 +282,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item6
 				{
@@ -295,7 +295,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.75;
 					text="com4_1";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item7
 				{
@@ -309,7 +309,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com2_1";
-					init="nul = [this] execVM ""Grenadier.sqf"";";
+					init="nul = [this] execVM ""UKInf_Grenadier.sqf"";";
 				};
 			};
 		};
@@ -867,7 +867,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.75;
 					text="squad2";
-					init="{_x assignAsCargo apc2} foreach units group squad2; {_x moveinCargo apc2} foreach units group squad2; nul = [this] execVM ""Grenadier.sqf""; group this setBehaviour ""CARELESS"";";
+					init="{_x assignAsCargo apc2} foreach units group squad2; {_x moveinCargo apc2} foreach units group squad2; nul = [this] execVM ""UKInf_Grenadier.sqf""; group this setBehaviour ""CARELESS"";";
 				};
 				class Item1
 				{
@@ -880,7 +880,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com7_1_1";
-					init="nul = [this] execVM ""Grenadier.sqf"";";
+					init="nul = [this] execVM ""UKInf_Grenadier.sqf"";";
 				};
 				class Item2
 				{
@@ -892,7 +892,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					skill=0.75;
 					text="com5_1_1";
-					init="nul = [this] execVM ""Sniper.sqf"";";
+					init="nul = [this] execVM ""UKInf_Marksman.sqf"";";
 				};
 				class Item3
 				{
@@ -905,7 +905,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com2_1_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item4
 				{
@@ -917,7 +917,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					skill=0.75;
 					text="com6_1_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item5
 				{
@@ -929,7 +929,7 @@ class Mission
 					vehicle="B_soldier_LAT_F";
 					skill=0.75;
 					text="com4_1_1";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item6
 				{
@@ -942,7 +942,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1_2";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item7
 				{
@@ -955,7 +955,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1_1_1";
-					init="nul = [this] execVM ""Medic.sqf"";";
+					init="nul = [this] execVM ""UKInf_Medic.sqf"";";
 				};
 			};
 			class Waypoints
@@ -1076,7 +1076,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.75;
 					text="squad3";
-					init="{_x assignAsCargo apc3} foreach units group squad3; {_x moveinCargo apc3} foreach units group squad3; nul = [this] execVM ""Grenadier.sqf""; group this setBehaviour ""CARELESS"";";
+					init="{_x assignAsCargo apc3} foreach units group squad3; {_x moveinCargo apc3} foreach units group squad3; nul = [this] execVM ""UKInf_Grenadier.sqf""; group this setBehaviour ""CARELESS"";";
 				};
 				class Item1
 				{
@@ -1089,7 +1089,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com7_1_1_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item2
 				{
@@ -1101,7 +1101,7 @@ class Mission
 					vehicle="B_soldier_M_F";
 					skill=0.75;
 					text="com5_1_1_1";
-					init="nul = [this] execVM ""Sniper.sqf"";";
+					init="nul = [this] execVM ""UKInf_Marksman.sqf"";";
 				};
 				class Item3
 				{
@@ -1114,7 +1114,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com2_1_1_1";
-					init="nul = [this] execVM ""Grenadier.sqf"";";
+					init="nul = [this] execVM ""UKInf_Grenadier.sqf"";";
 				};
 				class Item4
 				{
@@ -1126,7 +1126,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					skill=0.75;
 					text="com6_1_1_1";
-					init="nul = [this] execVM ""Machinegunner.sqf"";";
+					init="nul = [this] execVM ""UKInf_MG.sqf"";";
 				};
 				class Item5
 				{
@@ -1138,7 +1138,7 @@ class Mission
 					vehicle="B_soldier_exp_F";
 					skill=0.75;
 					text="com4_1_1_1";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item6
 				{
@@ -1151,7 +1151,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1_2_1";
-					init="nul = [this] execVM ""AntiTank.sqf"";";
+					init="nul = [this] execVM ""UKInf_AntiTank.sqf"";";
 				};
 				class Item7
 				{
@@ -1164,7 +1164,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.75;
 					text="com3_1_1_1_1";
-					init="nul = [this] execVM ""Medic.sqf"";";
+					init="nul = [this] execVM ""UKInf_Medic.sqf"";";
 				};
 			};
 			class Waypoints

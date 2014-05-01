@@ -13,7 +13,8 @@ _unit addMagazines ["9Rnd_45ACP_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
-_unit addMagazines ["150Rnd_762x51_Box_Tracer", 3];
+_unit addItem "FirstAidKit";
+_unit addMagazines ["150Rnd_762x51_Box_Tracer", 2];
 
 _unit addWeapon "LMG_Zafir_F";
 _optics = ["optic_ACO", "optic_ACO_grn", "optic_Holosight"];
@@ -30,8 +31,8 @@ _unit addMagazines ["SmokeShell", 1];
 _unit addWeapon "Binocular";
 
 _pack = unitBackpack _unit;
-_pack addMagazineCargo ["150Rnd_762x51_Box_Tracer", 3];
-_pack addItemCargo ["FirstAidKit", 3];
+_pack addMagazineCargo ["150Rnd_762x51_Box_Tracer", 4];
+_pack addItemCargo ["FirstAidKit", 2];
 
 
 

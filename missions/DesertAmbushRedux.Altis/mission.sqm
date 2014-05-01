@@ -112,6 +112,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=1;
+					text="squad_leader";
 					init="partisans = group this; nul = [this, true] execVM ""Rebel_Grenadier.sqf"";";
 					syncId=0;
 					synchronizations[]={1,3,6,11,12};
@@ -126,7 +127,7 @@ class Mission
 					vehicle="B_G_Soldier_AR_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_Machinegunner.sqf"";";
+					init="nul = [this, true] execVM ""Rebel_MG.sqf"";";
 				};
 				class Item2
 				{
@@ -138,7 +139,7 @@ class Mission
 					vehicle="B_G_Soldier_AR_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_Machinegunner.sqf"";";
+					init="nul = [this, true] execVM ""Rebel_MG.sqf"";";
 				};
 				class Item3
 				{

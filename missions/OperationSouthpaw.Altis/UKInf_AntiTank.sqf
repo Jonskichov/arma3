@@ -26,16 +26,13 @@ _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
 _unit addMagazines ["30Rnd_65x39_caseless_mag_Tracer", 9];
-_unit addMagazineCargo ["NLAW_F", 1];
 
 _unit addWeapon "arifle_MX_Black_F";
 _unit addPrimaryWeaponItem "optic_Hamr";
 
 _unit addWeapon "hgun_P07_F";
 
-_unit addWeapon "launch_NLAW_F";
-
-_unit addMagazines ["HandGrenade", 5];
+_unit addMagazines ["HandGrenade", 4];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 1];
@@ -46,6 +43,8 @@ _unit addWeapon "Binocular";
 _unit addBackpack "B_AssaultPack_rgr";
 _pack = unitBackpack _unit;
 
+_pack addMagazineCargo ["NLAW_F", 1];
+_unit addWeapon "launch_NLAW_F";
 _pack addMagazineCargo ["NLAW_F", 2];
 _pack addItemCargo ["FirstAidKit", 2];
 

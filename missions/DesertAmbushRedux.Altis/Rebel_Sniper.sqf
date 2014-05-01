@@ -13,6 +13,7 @@ _unit addMagazines ["9Rnd_45ACP_Mag", 3];
 _unit addMagazines ["Chemlight_green", 1];
 _unit addMagazines ["Chemlight_red", 1];
 _unit addMagazines ["Chemlight_blue", 1];
+_unit addItem "FirstAidKit";
 _unit addMagazines ["5Rnd_127x108_Mag", 6];
 
 _unit addWeapon "srifle_GM6_F";
@@ -28,6 +29,6 @@ _unit addMagazines ["SmokeShell", 1];
 _unit addWeapon "Binocular";
 
 _pack = unitBackpack _unit;
-_pack addItemCargo ["FirstAidKit", 3];
+_pack addItemCargo ["FirstAidKit", 2];
 _pack addMagazineCargo ["5Rnd_127x108_Mag", 5];
  
