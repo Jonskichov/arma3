@@ -24,11 +24,10 @@ _unit addMagazines ["HandGrenade", 4];
 _unit addMagazines ["SmokeShellGreen", 1];
 _unit addMagazines ["SmokeShellRed", 1];
 _unit addMagazines ["SmokeShell", 1];
-_unit addItem "FirstAidKit";
 
 _unit addWeapon "Binocular";
 
 _pack = unitBackpack _unit;
-_pack addItemCargo ["FirstAidKit", 2];
+_pack addItemCargo ["FirstAidKit", 3];
 _pack addMagazineCargo ["5Rnd_127x108_Mag", 5];
  
