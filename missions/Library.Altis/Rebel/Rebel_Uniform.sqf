@@ -2,7 +2,7 @@
 _unit = _this select 0;
 _useHelmets = _this select 1;
 
-/* if (!isServer) exitWith {}; */
+if (!isServer) exitWith {};
 waitUntil {!(isNull _unit) && alive _unit && time > 0};
 
 _backpacks = ["B_FieldPack_blk", "B_FieldPack_cbr", "B_FieldPack_khk", "B_FieldPack_ocamo", "B_FieldPack_oli", "B_FieldPack_oucamo"];

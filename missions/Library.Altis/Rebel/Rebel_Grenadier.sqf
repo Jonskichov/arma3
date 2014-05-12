@@ -1,7 +1,7 @@
 _unit = _this select 0;
 _useHelmets = _this select 1;
 
-/* if (!isServer) exitWith {}; */
+if (!isServer) exitWith {};
 waitUntil {!(isNull _unit) && alive _unit && time > 0};
 
 _handle = [_unit, _useHelmets] execVM "Rebel\Rebel_Uniform.sqf";
