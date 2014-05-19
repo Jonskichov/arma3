@@ -4,7 +4,7 @@ _useHelmets = _this select 1;
 if (!isServer) exitWith {};
 waitUntil {!(isNull _unit) && alive _unit && time > 0};
 
-_handle = [_unit, _useHelmets] execVM "Rebel_Uniform.sqf";
+_handle = [_unit, _useHelmets] execVM "Rebel\Rebel_Uniform.sqf";
 waitUntil {scriptDone _handle};
 
 removeAllWeapons _unit;

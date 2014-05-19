@@ -146,7 +146,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.80000001;
 					text="the_squad";
-					init="showMines = false; playergroup = group this; {_x assignAsCargo the_boat} foreach units group the_squad; {_x moveinCargo the_boat} foreach units group the_squad; nul = [this] execVM ""UKSF_Grenadier.sqf""; nul = [this] execVM ""Lasers.sqf"";";
+					init="showMines = false; playergroup = group this; {_x assignAsCargo the_boat} foreach units group the_squad; {_x moveinCargo the_boat} foreach units group the_squad; nul = [this] execVM ""UKSF\UKSF_Grenadier.sqf""; nul = [this] execVM ""Lasers.sqf"";";
 					syncId=0;
 					synchronizations[]={21,22,18,1,14,3,4,10};
 				};
@@ -161,7 +161,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com3";
-					init="nul = [this] execVM ""UKSF_Medic.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_Medic.sqf"";";
 				};
 				class Item2
 				{
@@ -173,7 +173,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com5";
-					init="nul = [this] execVM ""UKSF_Marksman.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_Marksman.sqf"";";
 				};
 				class Item3
 				{
@@ -185,7 +185,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com6";
-					init="nul = [this] execVM ""UKSF_Marksman.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_Marksman.sqf"";";
 				};
 				class Item4
 				{
@@ -198,7 +198,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com1";
-					init="nul = [this] execVM ""UKSF_Demo.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_Demo.sqf"";";
 				};
 				class Item5
 				{
@@ -210,7 +210,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com4";
-					init="nul = [this] execVM ""UKSF_MG.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_MG.sqf"";";
 				};
 				class Item6
 				{
@@ -223,7 +223,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.80000001;
 					text="com7";
-					init="nul = [this] execVM ""UKSF_Grenadier.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_Grenadier.sqf"";";
 				};
 				class Item7
 				{
@@ -236,7 +236,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com2";
-					init="nul = [this] execVM ""UKSF_MG.sqf"";";
+					init="nul = [this] execVM ""UKSF\UKSF_MG.sqf"";";
 				};
 			};
 		};
@@ -1348,8 +1348,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25798.355,0.24591371,27770.01};
-					azimut=130;
+					position[]={26441.75,0.042326637,27742.123};
+					azimut=138.02754;
 					offsetY=100;
 					special="FLY";
 					id=60;
@@ -1366,7 +1366,7 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={25903.113,-0.37059456,27680.055};
+					position[]={26532.92,-0.20471148,27638.418};
 					speed="FULL";
 					synchronizations[]={43,44};
 					class Effects
@@ -1403,7 +1403,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={25479.656,-0.31131849,27218.078};
+					position[]={26756.24,-0.23204598,26489.57};
 					speed="FULL";
 					class Effects
 					{
@@ -4215,12 +4215,11 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={27810.838,38.519398,25212.111};
-			a=1500;
-			b=1000;
+			position[]={26803.59,0.214692,26460.102};
+			a=100;
+			b=100;
 			angle=140;
 			activationBy="WEST";
-			activationType="NOT PRESENT";
 			interruptable=1;
 			age="UNKNOWN";
 			text="Success!";
@@ -4486,9 +4485,10 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={25909.695,-0.12784596,27790.848};
+			position[]={26554.91,-0.049340494,27747.207};
 			a=0;
 			b=0;
+			angle=8.0275345;
 			interruptable=1;
 			type="END1";
 			age="UNKNOWN";
@@ -4516,7 +4516,7 @@ class Mission
 		};
 		class Item22
 		{
-			position[]={27811.174,38.072742,25201.625};
+			position[]={26803.926,0.17648186,26449.615};
 			a=0;
 			b=0;
 			timeoutMin=5;

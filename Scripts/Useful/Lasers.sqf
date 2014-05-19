@@ -4,8 +4,10 @@ _units = units _group;
 
 _unit enableIRLasers true;
 {
-    _unit addPrimaryWeaponItem "acc_pointer_IR";
-    _x action ["NVGoggles", _x];
-    _x action ["IRLaserOn", _x];
+    if (local _x) then {
+        _unit addPrimaryWeaponItem "acc_pointer_IR";
+        _x action ["NVGoggles", _x];
+        _x action ["IRLaserOn", _x];
+    }
 }
 forEach _units;

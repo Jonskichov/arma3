@@ -1,6 +1,6 @@
 _unit = _this select 0;
 
-if (!isServer) exitWith {};
+if (!local _unit) exitWith {};
 waitUntil {!(isNull _unit) && alive _unit && time > 0};
 
 

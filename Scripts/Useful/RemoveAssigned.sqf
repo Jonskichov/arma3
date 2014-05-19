@@ -3,7 +3,9 @@ _group = group _unit;
 _units = units _group;
 
 {
-    removeAllAssignedItems _x;
-    _x addHeadgear "H_HelmetO_ocamo";
+    if (local _x) then {
+        removeAllAssignedItems _x;
+        _x addHeadgear "H_HelmetO_ocamo";
+    }
 }
 forEach _units;

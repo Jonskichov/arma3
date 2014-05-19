@@ -113,7 +113,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=1;
 					text="squad_leader";
-					init="partisans = group this; nul = [this, true] execVM ""Rebel_Grenadier.sqf"";";
+					init="partisans = group this; nul = [this, true] execVM ""Rebel\Rebel_Grenadier.sqf"";";
 					syncId=0;
 					synchronizations[]={1,3,6,11,12};
 				};
@@ -127,7 +127,7 @@ class Mission
 					vehicle="B_G_Soldier_AR_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_MG.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_MG.sqf"";";
 				};
 				class Item2
 				{
@@ -139,7 +139,7 @@ class Mission
 					vehicle="B_G_Soldier_AR_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_MG.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_MG.sqf"";";
 				};
 				class Item3
 				{
@@ -152,7 +152,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_Medic.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_Medic.sqf"";";
 				};
 				class Item4
 				{
@@ -165,7 +165,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_Marksman.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_Marksman.sqf"";";
 				};
 				class Item5
 				{
@@ -178,7 +178,7 @@ class Mission
 					player="PLAY CDG";
 					rank="SERGEANT";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_Grenadier.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_Grenadier.sqf"";";
 				};
 				class Item6
 				{
@@ -190,7 +190,7 @@ class Mission
 					vehicle="B_G_Soldier_LAT_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_AntiTank.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_AntiTank.sqf"";";
 				};
 				class Item7
 				{
@@ -202,7 +202,7 @@ class Mission
 					vehicle="B_G_Soldier_LAT_F";
 					player="PLAY CDG";
 					skill=1;
-					init="nul = [this, true] execVM ""Rebel_AntiTank.sqf"";";
+					init="nul = [this, true] execVM ""Rebel\Rebel_AntiTank.sqf"";";
 				};
 			};
 		};
@@ -929,7 +929,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.40000001;
 					text="officer_2";
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; null = [this, 100, 25, ""marker_1"", ""marker_1"", 25, true, ""SAFE"", ""RED"", ""LIMITED"", ""FILE"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf""; removeAllWeapons this;  this addMagazines [""9Rnd_45ACP_Mag"", 5];  this addWeapon ""hgun_ACPC2_F"";  ";
+					init="null = [this, 100, 25, ""marker_1"", ""marker_1"", 25, true, ""SAFE"", ""RED"", ""LIMITED"", ""FILE"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf""; nul = [this, true] execVM ""AAF_Officer.sqf"";";
 				};
 				class Item1
 				{
@@ -940,7 +940,7 @@ class Mission
 					vehicle="I_Soldier_lite_F";
 					rank="SERGEANT";
 					skill=0.40000001;
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; this addHeadgear ""H_Beret_grn"";       removeAllAssignedItems this; removeAllWeapons this;  this addMagazines [""30Rnd_9x21_Mag"", 5];  this addWeapon ""hgun_PDW2000_F"";  this addPrimaryWeaponItem ""optic_Holosight_smg"";  this addMagazines [""9Rnd_45ACP_Mag"", 5];  this addWeapon ""hgun_ACPC2_F"";  this addMagazines [""HandGrenade"", 4];";
+					init="nul = [this, true] execVM ""AAF_Bodyguard.sqf"";";
 				};
 				class Item2
 				{
@@ -951,7 +951,7 @@ class Mission
 					vehicle="I_Soldier_lite_F";
 					rank="SERGEANT";
 					skill=0.40000001;
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; this addHeadgear ""H_Beret_grn"";       removeAllAssignedItems this; removeAllWeapons this;  this addMagazines [""30Rnd_9x21_Mag"", 5];  this addWeapon ""hgun_PDW2000_F"";  this addPrimaryWeaponItem ""optic_Holosight_smg"";  this addMagazines [""9Rnd_45ACP_Mag"", 5];  this addWeapon ""hgun_ACPC2_F"";  this addMagazines [""HandGrenade"", 4];";
+					init="nul = [this, true] execVM ""AAF_Bodyguard.sqf"";";
 				};
 			};
 		};
@@ -1194,7 +1194,7 @@ class Mission
 					rank="MAJOR";
 					skill=0.40000001;
 					text="officer_1";
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; null = [this, 100, 25, ""marker_1"", ""marker_1"", 25, true, ""SAFE"", ""RED"", ""LIMITED"", ""FILE"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf""; removeAllWeapons this;  this addMagazines [""16Rnd_9x21_Mag"", 5];  this addWeapon ""hgun_Rook40_F"";";
+					init="null = [this, 100, 25, ""marker_1"", ""marker_1"", 25, true, ""SAFE"", ""RED"", ""LIMITED"", ""FILE"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf""; nul = [this, true] execVM ""CSAT_Officer.sqf"";";
 				};
 				class Item1
 				{
@@ -1205,7 +1205,7 @@ class Mission
 					vehicle="O_Soldier_lite_F";
 					rank="SERGEANT";
 					skill=0.40000001;
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; this addHeadgear ""H_Beret_ocamo"";       removeAllAssignedItems this; removeAllWeapons this;  this addMagazines [""30Rnd_9x21_Mag"", 5];  this addWeapon ""SMG_02_F"";  this addPrimaryWeaponItem ""optic_ACO_grn_smg"";  this addMagazines [""16Rnd_9x21_Mag"", 5];  this addWeapon ""hgun_Rook40_F"";  this addMagazines [""HandGrenade"", 4];";
+					init="nul = [this, true] execVM ""CSAT_Bodyguard.sqf"";";
 				};
 				class Item2
 				{
@@ -1216,7 +1216,7 @@ class Mission
 					vehicle="O_Soldier_lite_F";
 					rank="SERGEANT";
 					skill=0.40000001;
-					init="if (!isServer) exitWith {};  waitUntil {!(isNull this) && alive this && time > 0}; this addHeadgear ""H_Beret_ocamo"";       removeAllAssignedItems this; removeAllWeapons this;  this addMagazines [""30Rnd_9x21_Mag"", 5];  this addWeapon ""SMG_02_F"";  this addPrimaryWeaponItem ""optic_ACO_grn_smg"";  this addMagazines [""16Rnd_9x21_Mag"", 5];  this addWeapon ""hgun_Rook40_F"";  this addMagazines [""HandGrenade"", 4];";
+					init="nul = [this, true] execVM ""CSAT_Bodyguard.sqf"";";
 				};
 			};
 		};

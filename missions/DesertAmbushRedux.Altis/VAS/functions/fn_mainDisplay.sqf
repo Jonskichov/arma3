@@ -1,9 +1,9 @@
 #include "macro.sqf"
 /*
-	@version: 1.2
+	@version: 2.1
 	@file_name: fn_mainDisplay.sqf
 	@file_author: TAW_Tonic
-	@file_edit: 5/31/2013
+	@file_edit: 11/6/2013
 	@file_description: When called, sort the call and display our targeted information.
 */
 private["_request","_filter","_control","_info"];
@@ -22,7 +22,14 @@ if(_filter && !isNil {(uiNamespace getVariable "VAS_UI_FILTER_VAR")}) exitWith
 {
 	[(uiNamespace getVariable "VAS_UI_FILTER_VAR")] spawn VAS_fnc_filterMenu;
 };
-uiNamespace setVariable["VAS_UI_FILTER_VAR",nil];
+uiNamespace setVariable ["VAS_UI_FILTER_VAR",nil];
+uiNamespace setVariable ["VAS_UI_QuickMag",false];
+
+[] call VAS_fnc_updateLoad;
+
+
+lbSetCurSel[VAS_virt_list,0];
+lbSetCurSel[VAS_unit_list,0];
 
 switch (_request) do
 {
@@ -41,6 +48,8 @@ switch (_request) do
 				_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
 			};
 		} foreach _info;
+		
+		lbSort _control;
 		
 		_control = VAS_getControl(VAS_Main_Display,VAS_unit_list);
 		_info = [([] call VAS_fnc_fetchPlayerGear),[1,2,4,5,4096]] call VAS_fnc_filter;
@@ -71,6 +80,8 @@ switch (_request) do
 				_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
 			};
 		} foreach _info;
+		
+		lbSort _control;
 		
 		_control = VAS_getControl(VAS_Main_Display,VAS_unit_list);
 		_info = [([] call VAS_fnc_fetchPlayerGear),"mag"] call VAS_fnc_filter;
@@ -109,6 +120,8 @@ switch (_request) do
 			};
 		} foreach _info;
 		
+		lbSort _control;
+		
 		_control = VAS_getControl(VAS_Main_Display,VAS_unit_list);
 		_info = [([] call VAS_fnc_fetchPlayerGear),"items"] call VAS_fnc_filter;
 		
@@ -139,6 +152,8 @@ switch (_request) do
 			};
 		} foreach _info;
 		
+		lbSort _control;
+		
 		_control = VAS_getControl(VAS_Main_Display,VAS_unit_list);
 		_info = [([] call VAS_fnc_fetchPlayerGear),"packs"] call VAS_fnc_filter;
 		
@@ -167,6 +182,8 @@ switch (_request) do
 				_control lbSetPicture [(lbSize _control)-1,(_details select 2)];
 			};
 		} foreach _info;
+		
+		lbSort _control;
 		
 		_control = VAS_getControl(VAS_Main_Display,VAS_unit_list);
 		_info = [([] call VAS_fnc_fetchPlayerGear),"glass"] call VAS_fnc_filter;
