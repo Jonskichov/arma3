@@ -32,7 +32,8 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_02",
 		"A3_Armor_F_T100K",
 		"A3_Soft_F_Quadbike",
-		"a3_soft_f_beta_quadbike"
+		"a3_soft_f_beta_quadbike",
+		"A3_Weapons_F_EPA_Ammoboxes"
 	};
 	addOnsAuto[]=
 	{
@@ -65,6 +66,7 @@ class Mission
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Soft_F_Quadbike",
 		"a3_soft_f_beta_quadbike",
+		"A3_Weapons_F_EPA_Ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=10313448;
@@ -372,9 +374,6 @@ class Mission
 					class Effects
 					{
 					};
-					timeoutMin=7;
-					timeoutMid=7;
-					timeoutMax=7;
 					showWP="NEVER";
 				};
 				class Item2
@@ -694,8 +693,9 @@ class Mission
 					class Effects
 					{
 					};
-					timeoutMid=30;
-					timeoutMax=60;
+					timeoutMin=60;
+					timeoutMid=90;
+					timeoutMax=120;
 					showWP="NEVER";
 					syncId=15;
 				};
@@ -732,14 +732,14 @@ class Mission
 				class Item0
 				{
 					position[]={6223.1348,46.809452,10916.684};
-					azimut=439.05743;
+					azimut=439.05701;
 					special="FLY";
 					id=45;
 					side="GUER";
 					vehicle="I_MBT_03_cannon_F";
 					leader=1;
 					skill=0.40000001;
-					init="this setBehaviour ""SAFE""; this forceSpeed 4;";
+					init="this setBehaviour ""SAFE""; this forceSpeed 4; this setDammage 0.2;";
 				};
 			};
 			class Waypoints
@@ -752,9 +752,9 @@ class Mission
 					class Effects
 					{
 					};
-					timeoutMin=30;
-					timeoutMid=45;
-					timeoutMax=60;
+					timeoutMin=60;
+					timeoutMid=120;
+					timeoutMax=180;
 					showWP="NEVER";
 					syncId=16;
 				};
@@ -883,8 +883,9 @@ class Mission
 					class Effects
 					{
 					};
-					timeoutMid=10;
-					timeoutMax=20;
+					timeoutMin=60;
+					timeoutMid=120;
+					timeoutMax=180;
 					showWP="NEVER";
 					syncId=17;
 				};
@@ -972,7 +973,7 @@ class Mission
 					leader=1;
 					skill=0.40000001;
 					text="tank_1";
-					init="this setBehaviour ""SAFE""; this forceSpeed 5;";
+					init="this setBehaviour ""SAFE""; this forceSpeed 5; this setDammage 0.2;";
 				};
 			};
 			class Waypoints
@@ -985,6 +986,9 @@ class Mission
 					class Effects
 					{
 					};
+					timeoutMin=30;
+					timeoutMid=30;
+					timeoutMax=30;
 					showWP="NEVER";
 					syncId=18;
 				};
@@ -1937,14 +1941,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10892.063,32.304131,13377.978};
-					azimut=208.24707;
+					position[]={10283.222,20.309263,13074.358};
+					azimut=237.62306;
 					special="NONE";
 					id=105;
 					side="EAST";
 					vehicle="O_MBT_02_cannon_F";
 					leader=1;
 					skill=0.40000001;
+					init="this setDammage 0.2;";
 				};
 			};
 			class Waypoints
@@ -1952,7 +1957,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={10882.646,32.724739,13363.343};
+					position[]={10274.746,20.013411,13070.205};
 					combat="SAFE";
 					synchronizations[]={28};
 					class Effects
@@ -2934,19 +2939,19 @@ class Mission
 				items=5;
 				class Item0
 				{
-					position[]={7406.917,13.571349,11213.607};
-					placement=250;
+					position[]={7208.2798,15.023531,11521.604};
+					placement=150;
 					id=141;
 					side="GUER";
 					vehicle="I_Soldier_TL_F";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.40000001;
-					init="null = [this, 100, 250, ""marker_5"", ""marker_5"", 250, true, ""SAFE"", ""RED"", ""LIMITED"", ""COLUMN"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf"";";
+					init="null = [this, 100, 150, ""marker_5"", ""marker_5"", 150, true, ""SAFE"", ""RED"", ""LIMITED"", ""COLUMN"", 0, 10, 0, [true,35,25,3,1]] execVM ""USPS.sqf"";";
 				};
 				class Item1
 				{
-					position[]={7411.917,13.639108,11208.607};
+					position[]={7213.2798,14.903531,11516.604};
 					id=142;
 					side="GUER";
 					vehicle="I_Soldier_AR_F";
@@ -2955,7 +2960,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={7401.917,13.589392,11208.607};
+					position[]={7203.2798,15.049426,11516.604};
 					id=143;
 					side="GUER";
 					vehicle="I_Soldier_GL_F";
@@ -2963,7 +2968,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={7416.917,13.795732,11203.607};
+					position[]={7218.2798,14.783523,11511.604};
 					id=144;
 					side="GUER";
 					vehicle="I_soldier_LAT_F";
@@ -2971,7 +2976,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={7396.623,13.508075,11204.558};
+					position[]={7197.9858,15.054184,11512.554};
 					azimut=-28.0168;
 					special="NONE";
 					id=145;
@@ -2984,10 +2989,10 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=81;
+		items=84;
 		class Item0
 		{
-			position[]={6738.729,34.529415,11219.374};
+			position[]={6615.6499,72.897865,11217.725};
 			azimut=-72.502083;
 			special="NONE";
 			id=146;
@@ -3830,6 +3835,37 @@ class Mission
 			vehicle="Box_IND_Grenades_F";
 			skill=0.60000002;
 		};
+		class Item81
+		{
+			position[]={6737.8965,34.560238,11224.406};
+			azimut=516.74097;
+			id=227;
+			side="EMPTY";
+			vehicle="Box_East_WpsSpecial_F";
+			leader=1;
+			skill=0.40000001;
+		};
+		class Item82
+		{
+			position[]={6738.0962,34.525372,11223.012};
+			azimut=539.47614;
+			id=228;
+			side="EMPTY";
+			vehicle="C_supplyCrate_F";
+			leader=1;
+			skill=0.40000001;
+			init="nul = [this, true] execVM ""Rebel\Rebel_ClothesCrate.sqf"";";
+		};
+		class Item83
+		{
+			position[]={6737.4683,34.612251,11225.087};
+			azimut=680.09192;
+			id=229;
+			side="EMPTY";
+			vehicle="Box_IND_WpsLaunch_F";
+			leader=1;
+			skill=0.40000001;
+		};
 	};
 	class Markers
 	{
@@ -3987,7 +4023,7 @@ class Mission
 		};
 		class Item19
 		{
-			position[]={7407.0557,13.594818,11208.604};
+			position[]={7208.4185,14.974798,11516.6};
 			name="marker_5";
 			type="Empty";
 		};

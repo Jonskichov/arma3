@@ -1,8 +1,8 @@
 _unit = _this select 0;
 _useHelmets = _this select 1;
 
-if (!local _unit) exitWith {};
 waitUntil {!(isNull _unit) && alive _unit && time > 0};
+if (!local _unit) exitWith {};
 
 _handle = [_unit, _useHelmets] execVM "Rebel\Rebel_Uniform.sqf";
 waitUntil {scriptDone _handle};

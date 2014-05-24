@@ -4302,10 +4302,10 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={28205.779,25.630922,25659.477};
+			position[]={28231.475,25.380932,25706.045};
 			a=150;
-			b=180;
-			angle=300;
+			b=220;
+			angle=-74.849144;
 			activationBy="WEST";
 			activationType="EAST D";
 			interruptable=1;

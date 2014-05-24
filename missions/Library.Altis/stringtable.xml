@@ -288,6 +288,7 @@
 		</Key>
 		<Key ID="STR_VAS_Load_TransferBtn">
 			<Original>Transfer</Original>
+			<Russian>Передать</Russian>
 		</Key>
 		<Key ID="STR_VAS_Load_btnLoad">
 			<Original>Load</Original>
@@ -348,6 +349,7 @@
 	<Package name="VASTransferMenu">
 		<Key ID="STR_VAS_Transfer_MainMenu">
 			<Original>Virtual Ammobox System - Transfer Menu</Original>
+			<Russian>Виртуальный Ящик - Меню Передачи</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_SaveMenu">
 			<Original>Virtual Ammobox System - Save Transfer</Original>
@@ -360,6 +362,7 @@
 		</Key>
 		<Key ID="STR_VAS_Transfer_NoSlotSelection">
 			<Original>You either did not select a slot that you wanted to transfer to another user or the slot had no information.</Original>
+			<Russian>Вы либо не выбрали слот, который вы хотели передать другому пользователю или в слоте не было никакой информации.</Russian>
 		</Key>
 		<Key ID="STR_VAS_Transfer_BadUnit">
 			<Original>The selected user either doesn't exist.</Original>
@@ -412,6 +415,7 @@
 			<Original>No slot was selected to be loaded upon respawn!</Original>
 			<Italian>Non hai selezionato nessuno slot da caricare al respawn!</Italian>
 			<French>Aucun emplacement n'a été sélectionné pour être chargé lors de la réapparition!</French>
+			<Russian>Не выбран слот, который нужно загрузить</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_slotSelFail">
 			<Original>You didn't select a slot!</Original>
@@ -422,21 +426,25 @@
 			<Original>Weapon</Original>
 			<Italian>Armi</Italian>
 			<French>Armes</French>
+			<Russian>Оружие</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_addToInv">
 			<Original>Inventory</Original>
 			<Italian>Inventario</Italian>
 			<French>Inventaire</French>
+			<Russian>Инвентарь</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_acc1">
 			<Original>What do you want to do with that attachment?</Original>
 			<Italian>Cosa vuoi fare con questo accessorio?</Italian>
 			<French>Que voulez-vous faire avec cet emplacement?</French>
+			<Russian>Что вы хотите сделать с этим креплением?</Russian>
 		</Key>
 		<Key ID="STR_VAS_Prompt_acc2">
 			<Original>Please know that if you choose to add it to your weapon your current existing attachment in that slot will be lost.</Original>
 			<Italian>Attenzione, se attacchi l'accessorio alla tua arma, l'accessorio attaccato attualmente sarà sostituito.</Italian>
 			<French>Si vous choisissez de placer cette objet sur votre arme, sachez que l'objet actuellement placé sur l'arme sera automatiquement supprimé</French>
+			<Russian>Пожалуйста, знайте, что если вы прикрепите его к своему оружию, то ваше текущее крепление в этом слоте будет потеряно.</Russian>
 		</Key>
 	</Package>
 </Project>
