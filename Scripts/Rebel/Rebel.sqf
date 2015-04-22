@@ -52,7 +52,10 @@ if (_weapon == "Medic") then {
 	for "_i" from 1 to 1 do {_unit addItemToVest "Chemlight_blue";}; 
 	_unit addItemToBackpack "Medikit";
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "FirstAidKit";};
-};    
+};  
+if (_weapon == "Demo") then {
+	for "_i" from 1 to 2 do {_unit addItemToBackpack "IEDLandBig_Remote_Mag";};
+};  
 
 
 comment "Add items";
@@ -113,7 +116,7 @@ if (_weapon == "Sting") then {
 	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
 	_unit addPrimaryWeaponItem (_optics call BIS_fnc_selectRandom);
 };
-if (_weapon == "Carbine" || _weapon == "Medic" || _weapon == "AT") then {
+if (_weapon == "Carbine" || _weapon == "Medic" || _weapon == "AT" || _weapon == "Demo") then {
 	_weapons = ["arifle_Mk20C_plain_F", "arifle_Mk20C_F", "arifle_TRG20_F"];
 	_optics = ["optic_ACO", "optic_ACO_grn", "optic_Holosight"];
 	
