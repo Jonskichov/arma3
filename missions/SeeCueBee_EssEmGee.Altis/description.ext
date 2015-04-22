@@ -6,11 +6,3 @@ OnLoadMission = "CQB Practice";
 respawn = "GROUP";
 respawnDelay = 5;
 respawnDialog = false;
-
-
-#include "VAS\menu.hpp"
-
-class CfgFunctions
-{
-	#include "VAS\cfgfunctions.hpp"
-};

@@ -8,15 +8,15 @@ class Mission
 		"a3_characters_f_beta",
 		"A3_Characters_F_INDEP",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_beta_ammoboxes"
+		"a3_weapons_f_beta_ammoboxes",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_BLUFOR",
 		"A3_Characters_F_INDEP",
-		"a3_characters_f_beta",
+		"a3_characters_f",
+		"A3_Characters_F_BLUFOR",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_beta_ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=14795157;
@@ -43,26 +43,8 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=6;
 		class Item0
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={15920.367,14.492965,17364.277};
-					id=0;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					leader=1;
-					skill=0.60000002;
-					init="null = [this] execVM ""UKSF\UKSF_SMG.sqf"";";
-				};
-			};
-		};
-		class Item1
 		{
 			side="GUER";
 			class Vehicles
@@ -72,7 +54,7 @@ class Mission
 				{
 					position[]={21960.65,22.699425,21043.791};
 					azimut=136.9615;
-					id=1;
+					id=0;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -83,7 +65,7 @@ class Mission
 					position[]={21962.098,21.369312,21036.047};
 					placement=30;
 					azimut=136.9615;
-					id=2;
+					id=1;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					leader=1;
@@ -96,7 +78,7 @@ class Mission
 				{
 					position[]={21962.146,22.46468,21041.393};
 					azimut=136.9615;
-					id=3;
+					id=2;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -106,7 +88,59 @@ class Mission
 				{
 					position[]={21959.785,22.448771,21041.549};
 					azimut=136.9615;
+					id=3;
+					side="GUER";
+					vehicle="I_Soldier_lite_F";
+					skill=0.60000002;
+					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
+				};
+			};
+		};
+		class Item1
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={21962.527,19.270607,21031.111};
+					azimut=428.11252;
 					id=4;
+					side="GUER";
+					vehicle="I_Soldier_lite_F";
+					skill=0.60000002;
+					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
+				};
+				class Item1
+				{
+					position[]={21968.584,18.815298,21029.469};
+					placement=30;
+					azimut=428.11252;
+					id=5;
+					side="GUER";
+					vehicle="I_Soldier_lite_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					text="patrol_2";
+					init="nul = [this] execVM ""AAF\AAF_SMG.sqf""; nul = [this, 30] execVM ""RandomPatrol.sqf"";   nul = [this] execVM ""Flashlights.sqf"";";
+				};
+				class Item2
+				{
+					position[]={21964.68,19.427612,21031.541};
+					azimut=428.11252;
+					id=6;
+					side="GUER";
+					vehicle="I_Soldier_lite_F";
+					skill=0.60000002;
+					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
+				};
+				class Item3
+				{
+					position[]={21963.07,18.778553,21029.547};
+					azimut=428.11252;
+					id=7;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -122,9 +156,9 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={21962.527,19.270607,21031.111};
-					azimut=428.11252;
-					id=5;
+					position[]={21989.658,28.276739,21018.379};
+					azimut=221.28079;
+					id=8;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -132,23 +166,23 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={21968.584,18.815298,21029.469};
+					position[]={21983.051,23.40451,21016.5};
 					placement=30;
-					azimut=428.11252;
-					id=6;
+					azimut=221.28079;
+					id=9;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="patrol_2";
-					init="nul = [this] execVM ""AAF\AAF_SMG.sqf""; nul = [this, 30] execVM ""RandomPatrol.sqf"";   nul = [this] execVM ""Flashlights.sqf"";";
+					text="patrol_1";
+					init="nul = [this] execVM ""AAF\AAF_SMG.sqf""; nul = [this, 30] execVM ""RandomPatrol.sqf"";  nul = [this] execVM ""Flashlights.sqf"";";
 				};
 				class Item2
 				{
-					position[]={21964.68,19.427612,21031.541};
-					azimut=428.11252;
-					id=7;
+					position[]={21987.33,27.379919,21016.719};
+					azimut=221.28079;
+					id=10;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -156,9 +190,9 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={21963.07,18.778553,21029.547};
-					azimut=428.11252;
-					id=8;
+					position[]={21988.254,28.267099,21019.268};
+					azimut=221.28079;
+					id=11;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -174,61 +208,9 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={21989.658,28.276739,21018.379};
-					azimut=221.28079;
-					id=9;
-					side="GUER";
-					vehicle="I_Soldier_lite_F";
-					skill=0.60000002;
-					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
-				};
-				class Item1
-				{
-					position[]={21983.051,23.40451,21016.5};
-					placement=30;
-					azimut=221.28079;
-					id=10;
-					side="GUER";
-					vehicle="I_Soldier_lite_F";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="patrol_1";
-					init="nul = [this] execVM ""AAF\AAF_SMG.sqf""; nul = [this, 30] execVM ""RandomPatrol.sqf"";  nul = [this] execVM ""Flashlights.sqf"";";
-				};
-				class Item2
-				{
-					position[]={21987.33,27.379919,21016.719};
-					azimut=221.28079;
-					id=11;
-					side="GUER";
-					vehicle="I_Soldier_lite_F";
-					skill=0.60000002;
-					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
-				};
-				class Item3
-				{
-					position[]={21988.254,28.267099,21019.268};
-					azimut=221.28079;
-					id=12;
-					side="GUER";
-					vehicle="I_Soldier_lite_F";
-					skill=0.60000002;
-					init="nul = [this] execVM ""AAF\AAF_SMG.sqf"";";
-				};
-			};
-		};
-		class Item4
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
 					position[]={21978.57,20.167643,21016.727};
 					azimut=305.88855;
-					id=13;
+					id=12;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -239,7 +221,7 @@ class Mission
 					position[]={21976.682,20.17461,21021.559};
 					placement=30;
 					azimut=305.88855;
-					id=14;
+					id=13;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					leader=1;
@@ -252,7 +234,7 @@ class Mission
 				{
 					position[]={21977.16,19.658115,21017.426};
 					azimut=305.88855;
-					id=15;
+					id=14;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -262,7 +244,7 @@ class Mission
 				{
 					position[]={21979.09,20.447468,21018.488};
 					azimut=305.88855;
-					id=16;
+					id=15;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -270,7 +252,7 @@ class Mission
 				};
 			};
 		};
-		class Item5
+		class Item4
 		{
 			side="WEST";
 			class Vehicles
@@ -279,9 +261,9 @@ class Mission
 				class Item0
 				{
 					position[]={21989.242,28.41124,21040.832};
-					azimut=691.53363;
+					azimut=691.534;
 					special="NONE";
-					id=17;
+					id=16;
 					side="WEST";
 					vehicle="B_recon_F";
 					player="PLAYER COMMANDER";
@@ -289,48 +271,48 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="playergroup";
-					init="null = [this] execVM ""UKSF\UKSF_SMG_CQB.sqf""; group playergroup setFormation ""COLUMN"";";
+					init="null = [this, ""Vermin"", false, true] execVM ""UK.sqf"";";
 				};
 				class Item1
 				{
 					position[]={21984.127,28.30249,21045.219};
-					azimut=474.36563;
+					azimut=474.366;
 					special="NONE";
-					id=18;
+					id=17;
 					side="WEST";
 					vehicle="B_recon_F";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					init="null = [this] execVM ""UKSF\UKSF_SMG_CQB.sqf"";";
+					init="null = [this, ""Vermin"", false, true] execVM ""UK.sqf"";";
 				};
 				class Item2
 				{
 					position[]={21983.072,28.316822,21046.283};
-					azimut=68.792252;
+					azimut=68.792297;
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_recon_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="null = [this, ""Vermin"", false, true] execVM ""UK.sqf"";";
+				};
+				class Item3
+				{
+					position[]={21990.354,28.434015,21039.793};
+					azimut=723.35797;
 					special="NONE";
 					id=19;
 					side="WEST";
 					vehicle="B_recon_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					init="null = [this] execVM ""UKSF\UKSF_SMG_CQB.sqf"";";
-				};
-				class Item3
-				{
-					position[]={21990.354,28.434015,21039.793};
-					azimut=723.35767;
-					special="NONE";
-					id=20;
-					side="WEST";
-					vehicle="B_recon_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					init="null = [this] execVM ""UKSF\UKSF_SMG_CQB.sqf"";";
+					init="null = [this, ""Vermin"", false, true] execVM ""UK.sqf"";";
 				};
 			};
 		};
-		class Item6
+		class Item5
 		{
 			side="GUER";
 			class Vehicles
@@ -340,7 +322,7 @@ class Mission
 				{
 					position[]={21969.281,18.62668,21024.256};
 					azimut=412.66681;
-					id=21;
+					id=20;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -351,7 +333,7 @@ class Mission
 					position[]={21972.572,19.05971,21027.58};
 					placement=30;
 					azimut=368.12399;
-					id=22;
+					id=21;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					leader=1;
@@ -364,7 +346,7 @@ class Mission
 				{
 					position[]={21969.717,18.717842,21025.787};
 					azimut=368.12396;
-					id=23;
+					id=22;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -374,7 +356,7 @@ class Mission
 				{
 					position[]={21971.299,18.775801,21024.74};
 					azimut=368.12396;
-					id=24;
+					id=23;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
 					skill=0.60000002;
@@ -388,10 +370,10 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={21847.248,12.902222,20925.086};
+			position[]={22072.006,35.085533,21046.283};
 			azimut=230;
 			special="NONE";
-			id=25;
+			id=24;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			leader=1;
