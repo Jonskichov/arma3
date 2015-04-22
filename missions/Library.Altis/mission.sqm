@@ -25,15 +25,16 @@ class Mission
 		"A3_Armor_F_APC_Wheeled_03",
 		"A3_armor_f_beta_APC_Tracked_02",
 		"A3_Armor_F_EPB_APC_tracked_03",
-		"A3_Armor_F_Marid"
+		"A3_Armor_F_Marid",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Characters_F_Gamma",
 		"A3_Characters_F_OPFOR",
-		"a3_characters_f_beta",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Characters_F_INDEP",
 		"A3_Soft_F_TruckHeavy",
@@ -1563,7 +1564,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={26700.793,22.287193,24393.107};
+					position[]={27822.967,38.843788,25221.359};
 					id=121;
 					side="GUER";
 					vehicle="I_Soldier_lite_F";
@@ -1597,7 +1598,7 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			leader=1;
 			skill=0.5;
-			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""VAS\open.sqf""];";
+			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""VAS\open.sqf""]; this addAction[""<t color='#ff1111'>Virtual Vehicle Spawner</t>"",VVS_fnc_openVVS,[this,""All""]];";
 		};
 		class Item2
 		{

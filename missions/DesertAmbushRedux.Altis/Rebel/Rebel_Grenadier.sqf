@@ -9,29 +9,36 @@ waitUntil {scriptDone _handle};
 
 removeAllWeapons _unit;
 
-_unit addMagazines ["9Rnd_45ACP_Mag", 3];
-_unit addMagazines ["Chemlight_green", 1];
-_unit addMagazines ["Chemlight_red", 1];
-_unit addMagazines ["Chemlight_blue", 1];
-_unit addItem "FirstAidKit";
-_unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 9];
-_unit addMagazines ["1Rnd_HE_Grenade_shell", 5];
 
+_unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 1];
+_unit addMagazines ["1Rnd_HE_Grenade_shell", 1];
 _rifles = ["arifle_Mk20_GL_F", "arifle_TRG21_GL_F"];
 _rifle = _rifles call BIS_fnc_selectRandom;
 _unit addWeapon _rifle;
 _unit addPrimaryWeaponItem "optic_MRCO";
-_unit addWeapon "hgun_ACPC2_F";
 
-_unit addMagazines ["HandGrenade", 4];
-_unit addMagazines ["SmokeShellGreen", 1];
-_unit addMagazines ["SmokeShellRed", 1];
-_unit addMagazines ["SmokeShell", 1];
+_unit addMagazines ["9Rnd_45ACP_Mag", 1];
+_unit addWeapon "hgun_ACPC2_F";
 
 _unit addWeapon "Binocular";
 
+
+_unit addMagazines ["9Rnd_45ACP_Mag", 2];
+_unit addItem "FirstAidKit";
+_unit addItem "FirstAidKit";
+
+_unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 4];
+_unit addMagazines ["HandGrenade", 4];
+_unit addMagazines ["1Rnd_HE_Grenade_shell", 4];
+
+
 _pack = unitBackpack _unit;
-_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 6];
+_pack addItemCargo ["FirstAidKit", 1];
+_pack addMagazineCargo ["30Rnd_556x45_Stanag_Tracer_Red", 4];
 _pack addMagazineCargo ["HandGrenade", 4];
-_pack addItemCargo ["FirstAidKit", 2];
+_pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 4];
+_pack addMagazineCargo ["SmokeShellRed", 1];
+_pack addMagazineCargo ["SmokeShell", 1];
+_pack addMagazineCargo ["SmokeShellBlue", 1];
+_pack addMagazineCargo ["Chemlight_green", 3];
 

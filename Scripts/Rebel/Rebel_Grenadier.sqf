@@ -37,10 +37,8 @@ _pack addItemCargo ["FirstAidKit", 1];
 _pack addMagazineCargo ["30Rnd_556x45_Stanag_Tracer_Red", 4];
 _pack addMagazineCargo ["HandGrenade", 4];
 _pack addMagazineCargo ["1Rnd_HE_Grenade_shell", 4];
-_pack addMagazineCargo ["SmokeShellGreen", 1];
 _pack addMagazineCargo ["SmokeShellRed", 1];
 _pack addMagazineCargo ["SmokeShell", 1];
-_pack addMagazineCargo ["Chemlight_green", 1];
-_pack addMagazineCargo ["Chemlight_red", 1];
-_pack addMagazineCargo ["Chemlight_blue", 1];
+_pack addMagazineCargo ["SmokeShellBlue", 1];
+_pack addMagazineCargo ["Chemlight_green", 3];
 

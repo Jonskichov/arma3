@@ -1,0 +1,138 @@
+OnLoadMission = "ZGM Insurgency - Altis (BLUFOR)";
+OnLoadName = "Zeus Insurgency";
+loadScreen =  "loadscreen.jpg";
+
+respawn = "BASE";//1;
+respawnDelay = 5;
+respawnVehicleDelay = 10;
+respawnTemplates[] = {"MenuPosition","MenuInventory","Tickets"};
+respawnTemplatesVirtual[] = {};
+
+disabledAI = 1;
+joinUnassigned = 1;
+aiKills  = 1;
+Author = "ItsThomas, Jeff & Jonskichov";
+
+class Header { gameType = ZGM; minPlayers = 1; maxPlayers = 50; }; 
+
+#include "VAS\menu.hpp"
+#include "VVS\menu.h"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+	#include "VVS\Functions.h"
+
+};
+class CuratorGodMode
+{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_CuratorUnlock;
+		values[] = {0,1};
+		texts[] = {$STR_DISABLED,$STR_ENABLED};
+		default = 0;
+};
+class CuratorModeratorRights
+{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights;
+		values[] = {0,1,2};
+		texts[] = {
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_0,
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_1,
+			$STR_A3_MP_ZGM_m11.Altis_Params_CuratorModeratorRights_2
+		};
+		default = 0;
+	};
+#ifdef _PARAMTYPE
+	class Type
+	{
+		title = $STR_DISP_ARCGRP_TYPE;
+		values[] = {0,1};
+		texts[] = {$STR_A3_CfgMPGameTypes_Coop_name_0,$STR_A3_CfgMPGameTypes_DM_name_0};
+		default = 0;
+		isGlobal = 1;
+		file = "paramType.sqf";
+	};
+#endif
+class PlayerEditingAreaSize
+{
+		title = $STR_A3_MP_ZGM_m11.Altis_Params_PlayerEditingAreaSize;
+		values[] = {0,100,200,500,1000};
+		texts[] = {0,100,200,500,1000};
+		default = 100;
+};
+class Params 
+{ 
+		//paramarray 0
+		class EmptySpace 
+	      { 
+		title="[FOCK] AI Recruit Options:"; 
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;	
+		};
+	
+//	
+	      //paramarray 1
+		class FockMenuControl 
+	      { 
+		title="    [FOCK] Group/Recruit Menu On/Off"; 
+		values[]={ 1,0 }; 
+		texts[]={ "Enabled","Disabled"}; 
+		default=1; 
+		code = ""; 
+		};
+		
+		//paramarray 2
+		class FockRecControl 
+	      { 
+		title="    [FOCK] Recruit On/Off"; 
+		values[]={ 1,0 }; 
+		texts[]={ "Enabled","Disabled"}; 
+		default=1; 
+		code = ""; 
+		};
+		
+//		
+		//paramarray 3
+		class FockRecAmount 
+	      { 
+		title="    [FOCK] Recruit AI Amount"; 
+		values[]={ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }; 
+		texts[]={ "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"}; 
+		default= 10; 
+		code = ""; 
+		};
+		
+		//paramarray 4		
+		class FockDeleteAI 
+	      { 
+		title="    [FOCK] Delete AI on Leaving Group"; 
+		values[]={ 0,1 }; 
+		texts[]={ "No","Yes"}; 
+		default= 1; 
+		code = ""; 
+		};
+		
+		//paramarray 5		
+		class FockEmptyGrpDelete 
+	      { 
+		title="    [FOCK] Delete Empty Groups"; 
+		values[]={ 0,1 }; 
+		texts[]={ "No","Yes"}; 
+		default= 1; 
+		code = ""; 
+		};
+		
+		class TimeOfDay 
+		{
+			//paramarray 6
+			title = "Time of Day:";
+			values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
+			texts[] = {"00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","2:000","21:00","22:00","23:00"};
+			default = 12;
+		};
+
+};	
+
+#include "FOCKRecruitAI\RecruitMenu.hpp" //game settings for ingame GUI
+

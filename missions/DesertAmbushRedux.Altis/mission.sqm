@@ -33,29 +33,32 @@ class Mission
 		"A3_Armor_F_T100K",
 		"A3_Soft_F_Quadbike",
 		"a3_soft_f_beta_quadbike",
-		"A3_Weapons_F_EPA_Ammoboxes"
+		"A3_Weapons_F_EPA_Ammoboxes",
+		"a3_characters_f",
+		"a3_static_f",
+		"a3_soft_f_offroad_01"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_Gamma",
+		"a3_characters_f",
 		"A3_Characters_F_INDEP",
 		"A3_Soft_F_TruckHeavy",
 		"A3_Soft_F_Gamma_TruckHeavy",
 		"A3_Armor_F_APC_Wheeled_03",
 		"A3_Characters_F_OPFOR",
-		"a3_characters_f_beta",
 		"A3_Air_F_Heli_Light_02",
 		"A3_Armor_F_EPB_MBT_03",
 		"A3_Armor_F_EPB_APC_tracked_03",
 		"A3_Static_F_Gamma",
+		"a3_static_f",
 		"A3_Air_F_Beta_Heli_Attack_02",
 		"A3_Soft_F_MRAP_03",
 		"A3_Armor_F_T100K",
 		"A3_Modules_F_Intel",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_beta_ammoboxes",
-		"a3_weapons_f_gamma_ammoboxes",
 		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Structures_F_Mil_Shelters",
 		"A3_Air_F_EPB_Heli_Light_03",
@@ -65,7 +68,6 @@ class Mission
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Soft_F_Quadbike",
-		"a3_soft_f_beta_quadbike",
 		"A3_Weapons_F_EPA_Ammoboxes",
 		"a3_map_altis"
 	};
@@ -739,7 +741,7 @@ class Mission
 					vehicle="I_MBT_03_cannon_F";
 					leader=1;
 					skill=0.40000001;
-					init="this setBehaviour ""SAFE""; this forceSpeed 4; this setDammage 0.2;";
+					init="this setBehaviour ""SAFE""; this forceSpeed 4;";
 				};
 			};
 			class Waypoints
@@ -973,7 +975,7 @@ class Mission
 					leader=1;
 					skill=0.40000001;
 					text="tank_1";
-					init="this setBehaviour ""SAFE""; this forceSpeed 5; this setDammage 0.2;";
+					init="this setBehaviour ""SAFE""; this forceSpeed 5;";
 				};
 			};
 			class Waypoints
@@ -986,9 +988,9 @@ class Mission
 					class Effects
 					{
 					};
-					timeoutMin=30;
-					timeoutMid=30;
-					timeoutMax=30;
+					timeoutMin=40;
+					timeoutMid=40;
+					timeoutMax=40;
 					showWP="NEVER";
 					syncId=18;
 				};
@@ -3782,10 +3784,10 @@ class Mission
 		class Item75
 		{
 			position[]={6747.2368,34.406239,11218.889};
-			azimut=-49.851822;
+			azimut=-49.851799;
 			id=221;
 			side="EMPTY";
-			vehicle="Box_East_Grenades_F";
+			vehicle="Box_NATO_Grenades_F";
 			skill=0.60000002;
 		};
 		class Item76

@@ -1,3 +1,9 @@
+#include "VVS\menu.h"
+
+class CfgFunctions
+{
+	#include "VVS\Functions.h"
+};
 
 waitUntil {alive player && isplayer player};
 titleCut ["", "BLACK FADED", 999]; 

@@ -1,0 +1,2 @@
+
+markerCount = 0;

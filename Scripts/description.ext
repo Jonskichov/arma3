@@ -9,8 +9,10 @@ respawnDialog = false;
 
 
 #include "VAS\menu.hpp"
+#include "VVS\menu.h"
 
 class CfgFunctions
 {
 	#include "VAS\cfgfunctions.hpp"
+	#include "VVS\Functions.h"
 };

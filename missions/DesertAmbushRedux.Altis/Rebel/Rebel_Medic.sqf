@@ -16,7 +16,7 @@ _unit addMagazines ["Chemlight_blue", 1];
 _unit addItem "FirstAidKit";
 _unit addMagazines ["30Rnd_556x45_Stanag_Tracer_Red", 9];
 
-_rifles = ["arifle_Mk20_F", "arifle_TRG21_F"];
+_rifles = ["arifle_Mk20C_F", "arifle_TRG20_F"];
 _rifle = _rifles call BIS_fnc_selectRandom;
 _unit addWeapon _rifle;
 

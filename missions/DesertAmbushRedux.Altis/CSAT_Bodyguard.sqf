@@ -12,7 +12,7 @@ _unit addHeadgear "H_Beret_ocamo";
 
 _unit addMagazines ["30Rnd_9x21_Mag", 5];
 _unit addWeapon "SMG_02_F";
-_unit addPrimaryWeaponItem "optic_ACO_grn_smg";
+_unit addPrimaryWeaponItem "optic_ACO_smg";
 
 _unit addMagazines ["16Rnd_9x21_Mag", 5];
 _unit addWeapon "hgun_Rook40_F";

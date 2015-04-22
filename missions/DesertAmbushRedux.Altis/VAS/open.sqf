@@ -9,4 +9,10 @@ VAS_box_backpacks = (_this select 0) getVariable "bis_backpacks";
 VAS_box_goggles = (_this select 0) getVariable "bis_goggles";
 
 createDialog "VAS_Diag";
+["guns",false] spawn VAS_fnc_mainDisplay; 
+ctrlShow [2507,false];
+ctrlShow [2508,false];
+ctrlShow [2509,false];
+ctrlShow [2850,false];
+ctrlShow [2851,false];
 disableSerialization;
