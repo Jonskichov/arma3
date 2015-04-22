@@ -1,11 +1,27 @@
 _unit = _this select 0;
-_group = group _unit;
-_units = units _group;
+waitUntil {!(isNull _unit ) && alive _unit && time > 0};
 
-{
-    removeAllAssignedItems _x;
-    _x addHeadgear "H_HelmetO_ocamo";
-    _x addPrimaryWeaponItem "acc_flashlight";
-    _x enableGunLights "forceOn"
+{                       
+	waitUntil {!(isNull _x) && alive _x && time > 0};
+	
+    if (local _x) then {
+    	if (side _unit == west) then {
+			_unit unassignItem "NVGoggles";
+			_unit removeItem "NVGoggles";   
+		};
+		
+    	if (side _unit == resistance) then {
+			_unit unassignItem "NVGoggles_INDEP";
+			_unit removeItem "NVGoggles_INDEP";   
+		};
+		
+    	if (side _unit == east) then {
+			_unit unassignItem "NVGoggles_OPFOR";
+			_unit removeItem "NVGoggles_OPFOR";   
+		};
+		
+        _x addPrimaryWeaponItem "acc_flashlight";
+        _x enableGunLights "forceOn";
+    }
 }
-forEach _units;
+forEach (units group _unit);

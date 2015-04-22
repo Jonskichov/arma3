@@ -1,5 +1,4 @@
 _unit = _this select 0;
-
 waitUntil {!(isNull _unit ) && alive _unit && time > 0};
 
 {                       

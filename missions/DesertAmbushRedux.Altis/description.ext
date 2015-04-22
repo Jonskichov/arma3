@@ -6,11 +6,3 @@ OnLoadMission = "Ambush the AAF convoy before moving on to assassinate two enemy
 respawn = "GROUP";
 respawnDelay = 5;
 respawnDialog = false;
-
-
-#include "VAS\menu.hpp"
-
-class CfgFunctions
-{
-	#include "VAS\cfgfunctions.hpp"
-};

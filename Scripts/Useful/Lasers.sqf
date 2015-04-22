@@ -1,13 +1,11 @@
 _unit = _this select 0;
-_group = group _unit;
-_units = units _group;
+waitUntil {!(isNull _unit ) && alive _unit && time > 0};
 
-_unit enableIRLasers true;
 {
-    if (local _x) then {
-        _unit addPrimaryWeaponItem "acc_pointer_IR";
+	waitUntil {!(isNull _x) && alive _x && time > 0};	
+    if (local _x || isPlayer _x) then {
+    	_x enableIRLasers true;
         _x action ["NVGoggles", _x];
-        _x action ["IRLaserOn", _x];
     }
 }
-forEach _units;
+forEach (units group _unit);

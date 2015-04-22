@@ -30,12 +30,13 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Camping",
 		"A3_Structures_F_Items_Vessels",
 		"A3_Modules_F_Curator_Animals",
-		"A3_Air_F_Beta_Heli_Attack_01"
+		"A3_Air_F_Beta_Heli_Attack_01",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_OPFOR",
-		"a3_characters_f_beta",
+		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Modules_F_Sites",
@@ -44,14 +45,13 @@ class Mission
 		"A3_Air_F_Heli_Light_02",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Characters_F_Civil",
-		"a3_characters_f_gamma",
 		"A3_Soft_F_MRAP_02",
+		"A3_Characters_F_Gamma",
 		"A3_Modules_F_Curator_Animals",
 		"A3_Armor_F_T100K",
 		"A3_armor_f_beta_APC_Tracked_02",
 		"A3_Structures_F_Civ_Camping",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_beta_ammoboxes",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Soft_F_Gamma_TruckHeavy",
 		"A3_Soft_F_Car",
@@ -146,7 +146,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.80000001;
 					text="the_squad";
-					init="showMines = false; playergroup = group this; {_x assignAsCargo the_boat} foreach units group the_squad; {_x moveinCargo the_boat} foreach units group the_squad; nul = [this] execVM ""UKSF\UKSF_Grenadier.sqf""; nul = [this] execVM ""Lasers.sqf"";";
+					init="null = [this, ""MXGL"", true] execVM ""SetupSquadMember.sqf"";";
 					syncId=0;
 					synchronizations[]={21,22,18,1,14,3,4,10};
 				};
@@ -161,7 +161,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com3";
-					init="nul = [this] execVM ""UKSF\UKSF_Medic.sqf"";";
+					init="null = [this, ""Medic"", false] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item2
 				{
@@ -173,7 +173,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com5";
-					init="nul = [this] execVM ""UKSF\UKSF_Marksman.sqf"";";
+					init="null = [this, ""MXM"", true] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item3
 				{
@@ -185,7 +185,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com6";
-					init="nul = [this] execVM ""UKSF\UKSF_Marksman.sqf"";";
+					init="null = [this, ""MXM"", true] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item4
 				{
@@ -198,7 +198,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com1";
-					init="nul = [this] execVM ""UKSF\UKSF_Demo.sqf"";";
+					init="null = [this, ""Demo"", false] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item5
 				{
@@ -210,7 +210,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.80000001;
 					text="com4";
-					init="nul = [this] execVM ""UKSF\UKSF_MG.sqf"";";
+					init="null = [this, ""MXSW"", true] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item6
 				{
@@ -223,7 +223,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.80000001;
 					text="com7";
-					init="nul = [this] execVM ""UKSF\UKSF_Grenadier.sqf"";";
+					init="null = [this, ""MXGL"", true] execVM ""SetupSquadMember.sqf"";";
 				};
 				class Item7
 				{
@@ -236,7 +236,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="com2";
-					init="nul = [this] execVM ""UKSF\UKSF_MG.sqf"";";
+					init="null = [this, ""MXSW"", true] execVM ""SetupSquadMember.sqf"";";
 				};
 			};
 		};
@@ -259,7 +259,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="the_boat";
-					init="{_x setSpeaker ""Male01ENGB"";} foreach crew the_boat;";
+					init="{_x assignAsCargo the_boat} foreach units group the_squad; {_x moveinCargo the_boat} foreach units group the_squad; nul = [this] execVM ""BoatItems.sqf"";";
 				};
 			};
 			class Waypoints
@@ -317,7 +317,8 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={28122.678,0.83692795,24804.801};
+					position[]={28122.678,0.83738768,24804.801};
+					speed="FULL";
 					class Effects
 					{
 					};
@@ -3436,7 +3437,7 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			leader=1;
 			skill=0.5;
-			init="this addAction[""<t color='#ff1111'>Virtual Ammobox</t>"", ""VAS\open.sqf""];";
+			init="nul = [""AmmoboxInit"", [this, true]] spawn BIS_fnc_arsenal;";
 		};
 		class Item7
 		{

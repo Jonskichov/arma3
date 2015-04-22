@@ -1,5 +1,9 @@
 
 waitUntil {alive player && isplayer player};
+
+showMines = false; 
+playergroup = group this;
+
 titleCut ["", "BLACK FADED", 999]; 
 [] Spawn { 
  
