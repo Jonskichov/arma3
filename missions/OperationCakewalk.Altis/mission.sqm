@@ -145,8 +145,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.80000001;
-					text="the_squad";
-					init="null = [this, ""MXGL"", true] execVM ""SetupSquadMember.sqf"";";
+					init="nul = [this, the_boat] execVM ""LoadVehicle.sqf""; null = [this, ""MXGL"", true] execVM ""SetupSquadMember.sqf"";";
 					syncId=0;
 					synchronizations[]={21,22,18,1,14,3,4,10};
 				};
@@ -259,7 +258,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.80000001;
 					text="the_boat";
-					init="{_x assignAsCargo the_boat} foreach units group the_squad; {_x moveinCargo the_boat} foreach units group the_squad; nul = [this] execVM ""BoatItems.sqf"";";
+					init="nul = [this] execVM ""BoatItems.sqf""; nul = [this] execVM ""UKCrew.sqf"";";
 				};
 			};
 			class Waypoints
@@ -2803,7 +2802,7 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={27762.686,36.096237,25145.031};
+					position[]={27825.857,37.81879,25201.135};
 					placement=150;
 					id=106;
 					side="EAST";
@@ -2816,7 +2815,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={27765.496,35.569984,25142.842};
+					position[]={27828.668,37.633698,25198.945};
 					id=107;
 					side="EAST";
 					vehicle="O_soldierU_AR_F";
@@ -2825,7 +2824,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={27760.396,36.476231,25142.217};
+					position[]={27823.568,37.730824,25198.32};
 					id=108;
 					side="EAST";
 					vehicle="O_soldierU_medic_F";
@@ -2833,7 +2832,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={27768.373,35.120766,25140.457};
+					position[]={27831.545,37.439938,25196.561};
 					id=109;
 					side="EAST";
 					vehicle="O_soldierU_A_F";
@@ -4115,7 +4114,7 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={27763.168,35.971855,25142.547};
+			position[]={27826.34,37.677708,25198.65};
 			name="marker_3";
 			type="Empty";
 		};

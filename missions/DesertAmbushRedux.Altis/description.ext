@@ -6,3 +6,14 @@ OnLoadMission = "Ambush the AAF convoy before moving on to assassinate two enemy
 respawn = "GROUP";
 respawnDelay = 5;
 respawnDialog = false;
+
+class Params
+{
+	class Arsenal
+	{
+		title = "Allow Arsenal";
+		values[] = {0, 1};
+		texts[] = {"No", "Yes"};
+		default = 0;
+	};
+};

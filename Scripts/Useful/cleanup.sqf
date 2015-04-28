@@ -1,4 +1,7 @@
-private ["_aU", "_dU"];
+if (!isServer) exitWith {};
+                           
+
+private ["_aU", "_dU"];    
 _aU = allUnits;
 
 sleep 600;

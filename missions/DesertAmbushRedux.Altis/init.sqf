@@ -1,7 +1,22 @@
 
-waitUntil {alive player && isplayer player};
+waitUntil {alive player && isPlayer player};
+
+playergroup = group player;
+convoy = [apc_1, truck_1, truck_2, truck_3] + (units group reinf_1) + (units group reinf_2) + (units group reinf_3);
 
 titleCut ["", "BLACK FADED", 999]; 
+
+_handle = [] execVM "WaitForPlayers.sqf";
+waitUntil {scriptDone _handle};
+
+if (isServer) then {
+	_arsenal = paramsArray select 0;
+	if (_arsenal == 1) then {
+		nul = ["AmmoboxInit", [box1, true]] spawn BIS_fnc_arsenal;
+		nul = ["AmmoboxInit", [box2, true]] spawn BIS_fnc_arsenal;
+	};
+};
+
 [] Spawn { 
  
     sleep 1;

@@ -6,11 +6,3 @@ OnLoadMission = "Take the beach and cut off the enemy's retreat.";
 respawn = "GROUP";
 respawnDelay = 5;
 respawnDialog = false;
-
-
-#include "VAS\menu.hpp"
-
-class CfgFunctions
-{
-	#include "VAS\cfgfunctions.hpp"
-};

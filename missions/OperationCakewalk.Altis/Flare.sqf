@@ -15,7 +15,9 @@
 	
 	Class: The flare class
 		- (STRING)
-*/
+*/                         
+
+if (!isServer) exitWith {};
 
 //Params
 private ["_start", "_end", "_horizontalSpeed", "_verticalSpeed"];
