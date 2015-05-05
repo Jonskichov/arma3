@@ -4,9 +4,9 @@ comment "Rebel equipment";
 _unit = _this select 0;
 _weapon = _this select 1;
 _helmet = _this select 2;
+_hasMarksmen = (332350 in (getDLCs 1));
 
-
-waitUntil {!(isNull _unit) && alive _unit && time > 0};
+waitUntil {!(isNull _unit) && alive _unit && time > 0;};
 if (!local _unit) exitWith {};
 
 
@@ -54,7 +54,7 @@ if (_weapon == "Medic") then {
 	for "_i" from 1 to 4 do {_unit addItemToBackpack "FirstAidKit";};
 };  
 if (_weapon == "Demo") then {
-	for "_i" from 1 to 2 do {_unit addItemToBackpack "IEDLandBig_Remote_Mag";};
+	for "_i" from 1 to 4 do {_unit addItemToBackpack "IEDLandSmall_Remote_Mag";};
 };  
 
 
@@ -68,14 +68,15 @@ _unit addWeapon "Binocular";
 
 comment "Add weapons";
 if (_weapon == "GL") then {
-	_weapons = ["arifle_TRG21_GL_F", "arifle_Mk20_GL_F"];               
+	_weapons = ["arifle_TRG21_GL_F", "arifle_Mk20_GL_F", "arifle_Mk20_GL_plain_F"];    
+	_optics = ["optic_MRCO", "optic_Hamr"];
 	
 	_unit addItemToVest "30Rnd_556x45_Stanag";
 	_unit addItemToVest "1Rnd_HE_Grenade_shell";
 	_unit addWeapon (_weapons call BIS_fnc_selectRandom);
 	for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 	for "_i" from 1 to 5 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
-	_unit addPrimaryWeaponItem "optic_MRCO";
+	_unit addPrimaryWeaponItem (_optics call BIS_fnc_selectRandom);
 };
 if (_weapon == "Zafir") then {
 	_optics = ["optic_ACO", "optic_ACO_grn", "optic_Holosight"];
@@ -97,14 +98,22 @@ if (_weapon == "M200") then {
 	_unit addPrimaryWeaponItem (_optics call BIS_fnc_selectRandom);
 	_unit addPrimaryWeaponItem (_bipods call BIS_fnc_selectRandom);
 };
-if (_weapon == "Rahim") then {
-	_optics = ["optic_DMS", "optic_SOS"];
+if (_weapon == "DMR") then {
+	_weapons = [];
+	_optics = [];
+	if (_hasMarksmen) then {
+		_weapons = ["srifle_EBR_F", "srifle_DMR_06_camo_F", "srifle_DMR_06_olive_F"];
+		_optics = ["optic_DMS", "optic_SOS", "optic_KHS_blk"];
+	}
+	else {
+		_weapons = ["srifle_EBR_F"];
+		_optics = ["optic_DMS", "optic_SOS"];
+	};
 	_bipods = ["bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk"];
 	
-	_unit addItemToVest "10Rnd_762x54_Mag";
-	_unit addWeapon "srifle_DMR_01_F";
-	for "_i" from 1 to 6 do {_unit addItemToVest "10Rnd_762x54_Mag";};
-	for "_i" from 1 to 4 do {_unit addItemToBackpack "10Rnd_762x54_Mag";};
+	_unit addItemToVest "20Rnd_762x51_Mag";
+	_unit addWeapon (_weapons call BIS_fnc_selectRandom);
+	for "_i" from 1 to 5 do {_unit addItemToVest "20Rnd_762x51_Mag";};
 	_unit addPrimaryWeaponItem (_optics call BIS_fnc_selectRandom);
 	_unit addPrimaryWeaponItem (_bipods call BIS_fnc_selectRandom);
 };
@@ -133,6 +142,26 @@ if (_weapon == "Carbine" || _weapon == "Medic" || _weapon == "AT" || _weapon == 
 	};
 };                                                           
 
-for "_i" from 1 to 2 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
-_unit addWeapon "hgun_ACPC2_F";
-_unit addItemToUniform "9Rnd_45ACP_Mag";
+_sideArms = ["hgun_ACPC2_F", "hgun_P07_F", "hgun_Pistol_heavy_02_F", "hgun_Rook40_F"];
+_sideArm = (_sideArms call BIS_fnc_selectRandom);
+if (_sideArm == "hgun_ACPC2_F") then {
+	_unit addItemToUniform "9Rnd_45ACP_Mag";
+	_unit addWeapon "hgun_ACPC2_F";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "9Rnd_45ACP_Mag";};
+};
+if (_sideArm == "hgun_P07_F") then {
+	_unit addItemToUniform "16Rnd_9x21_Mag";
+	_unit addWeapon "hgun_P07_F";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
+};
+if (_sideArm == "hgun_Pistol_heavy_02_F") then {
+	_unit addItemToUniform "6Rnd_45ACP_Cylinder";
+	_unit addWeapon "hgun_Pistol_heavy_02_F";
+	for "_i" from 1 to 3 do {_unit addItemToUniform "6Rnd_45ACP_Cylinder";};
+	_unit addHandgunItem "optic_Yorris";
+};
+if (_sideArm == "hgun_Rook40_F") then {
+	_unit addItemToUniform "16Rnd_9x21_Mag";
+	_unit addWeapon "hgun_Rook40_F";
+	for "_i" from 1 to 2 do {_unit addItemToUniform "16Rnd_9x21_Mag";};
+};

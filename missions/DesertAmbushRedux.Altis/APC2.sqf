@@ -59,7 +59,7 @@ do {
 
 
 // Crew waypoints
-_crewUnloadWaypoint = _crewGroup addWaypoint [_startPos, 100];
+_crewUnloadWaypoint = _crewGroup addWaypoint [_startPos, 50];
 _crewUnloadWaypoint setWaypointType "TR UNLOAD";
 
 _crewHoldWaypoint = _crewGroup addWaypoint [getWPPos _crewUnloadWaypoint, 50];
@@ -69,7 +69,7 @@ _crewGroup setCurrentWaypoint _crewUnloadWaypoint;
 
 
 // Unit waypoints
-_unitHoldWaypoint = _squadGroup addWaypoint [_startPos, 100];
+_unitHoldWaypoint = _squadGroup addWaypoint [_startPos, 50];
 _unitHoldWaypoint setWaypointType "SAD";
 
 _squadGroup setCurrentWaypoint _unitHoldWaypoint;

@@ -82,7 +82,7 @@ if (isNull gunner _unit) then {
 	_getOutWaypoint setWaypointType "GETOUT";
 	
 	_holdWaypoint = _squadGroup addWaypoint [getWPPos _getOutWaypoint, 50];
-	_holdWaypoint setWaypointType "MOVE";
+	_holdWaypoint setWaypointType "HOLD";
 	
 	_squadGroup setCurrentWaypoint _getOutWaypoint;
 }
