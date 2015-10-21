@@ -2,7 +2,7 @@
 waitUntil {alive player && isPlayer player};
 
 playergroup = group player;
-convoy = [apc_1, truck_1, truck_2, truck_3] + (units group reinf_1) + (units group reinf_2) + (units group reinf_3);
+convoy = (crew apc_1) + (crew truck_1) + (crew truck_2) + (crew truck_3) + (units group reinf_1) + (units group reinf_2) + (units group reinf_3);
 
 titleCut ["", "BLACK FADED", 999]; 
 
@@ -12,8 +12,7 @@ waitUntil {scriptDone _handle};
 if (isServer) then {
 	_arsenal = paramsArray select 0;
 	if (_arsenal == 1) then {
-		nul = ["AmmoboxInit", [box1, true]] spawn BIS_fnc_arsenal;
-		nul = ["AmmoboxInit", [box2, true]] spawn BIS_fnc_arsenal;
+		nul = ["AmmoboxInit", [arsenal, true]] spawn BIS_fnc_arsenal;
 	};
 };
 
@@ -28,7 +27,7 @@ if (isServer) then {
         0, 0.7, "<t color='#FFFFFFFF' align='center'>%1</t>"
 	] spawn BIS_fnc_typeText;
     
-	sleep 5; 
+	sleep 3; 
     
     "dynamicBlur" ppEffectEnable true;    
     "dynamicBlur" ppEffectAdjust [6];    
